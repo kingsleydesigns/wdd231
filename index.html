@@ -5,15 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD231</title>
+    <meta name="description" content="This page contains information about my first certificate program; the courses taken and the course work involved">
+    <meta name="author" content="Kingsley Ezepue">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-large.css">
 </head>
 
 <body>
     <header>
-        <h1>WDD231</h1>
-    </header>
-    <main>
-        <p>This is my WDD231 homepage.</p>
-    </main>
+        <div class="profile">
+          <img src="images/profile.jpg" alt="Profile Picture">
+          <h1>Kingsley C. Ezepue</h1>
+        </div>
+        <div id="menu-icon">&#9776;</div>
+        <nav id="menu">
+            <a href="#" class="active">Home</a>
+            <a href="#">Chamber</a>
+            <a href="https://github.com/kingsleydesigns" target="_blank">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/kingsleyezepue" target="_blank">LinkedIn</a>
+          </nav>
+      </header>
+      <main>
+        <section class="section course-section">
+            <div class="section-title">Course Work</div>
+            <div class="bullets">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+          
+        <section class="section country-section">
+            <div class="section-title">Nigeria, Africa</div>
+            <div class="image-container">
+                <img src="images/olumo-rock(1) (1).webp" alt="Olumo rock">
+                <div class="caption">Olumo Rock</div>
+            </div>
+        </section>
+          
+        <section class="section certificate-section">
+            <div class="section-title">Web and Computer Programming Certificate</div>
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="CSE">CSE</button>
+                <button data-filter="WDD">WDD</button>
+            </div>
+            <div id="courses" class="courses"></div>
+            <div id="totalCredits"></div>
+        </section>    
+      </main>
+      <footer>
+        <p> &copy; <span id="currentyear"></span> Kingsley C. Ezepue
+            <div class="country">
+                Nigeria <img src="images/Nigerianflag.png" alt="Nigerian Flag">
+            </div>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/scripts.js">defer</script>
 </body>
-
 </html>
