@@ -96,7 +96,7 @@ h1, .theButtons {
 #members.grid {
     margin: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
     /* box-shadow: 0 0 20px black; */
 }
