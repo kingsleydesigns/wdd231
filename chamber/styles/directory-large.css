@@ -1,0 +1,45 @@
+@media screen and (min-width: 818px) {
+
+    button#hamburger {
+        display: none;
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+
+    nav ul li a {
+        border: none;
+        border-right: 1px solid rgba(0,0,0,0.2);
+    }
+
+    nav ul li:last-child a {
+        border:none;}
+    
+    footer {
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .footer-social {
+        align-content: center;
+        justify-self: center;
+        padding-right: 5rem;
+    }
+
+
+
+
+
+
+
+
+}

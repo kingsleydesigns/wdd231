@@ -1,0 +1,23 @@
+{
+    "family" : "Laguerta",
+    "move_in_date" : "07-01-2025",
+    "number_of_people" : 3,
+    "visited_by_bishopric" : true,
+    "family_members" : [
+        {
+            "name" : "Michael",
+            "Gender" : "male",
+            "birth_date" : "24-07-1965"
+        },
+        {
+            "name" : "Estarosa",
+            "Gender" : "female",
+            "birth_date" : "13-04-1975"
+        },
+        {
+            "name" : "Bruno",
+            "Gender" : "male",
+            "birth_date" : "03-08-2004"
+        }
+    ]
+}

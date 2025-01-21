@@ -86,9 +86,26 @@ const courses = [
     }
 ]
 
-  document.getElementById('menu-icon').addEventListener('click', () => {
+  menuIcon = document.getElementById('menu-icon')
+  menuIcon.addEventListener('click', () => {
     const menu = document.getElementById('menu');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+
+    // menu.classList.toggle('visible');
+      // Toggle visibility class
+    if (menu.classList.contains('visible')) {
+      // Closing the menu
+      menu.classList.remove('visible');
+      setTimeout(() => {
+        menu.style.visibility = 'hidden'; // Hide menu after animation ends
+      }, 500); // Matches the transition duration in CSS
+    } else {
+      // Opening the menu
+      menu.style.visibility = 'visible'; // Ensure it's visible
+      menu.classList.add('visible');
+    }
+
+    menuIcon.textContent = menu.classList.contains('visible') ? 'X' : '☰';
+
   });
 
   function renderCourses(filter = 'all') {
@@ -124,9 +141,21 @@ const courses = [
     link.addEventListener('click', () => {
         document.querySelectorAll('a').forEach(btn => btn.classList.remove('active'));
         link.classList.add('active');
-        renderCourses(filter);
-    });
+
+        const menuIcon = document.getElementById('menu-icon')      
+        const menu = document.getElementById('menu');
+        
+
+            // Close the menu and reset the icon (only in mobile view)
+        if (window.innerWidth < 818) {
+          menu.classList.remove('visible');
+          setTimeout(() => {
+            menu.style.visibility = 'hidden';
+          }, 300); // Matches the transition duration in CSS
+          menuIcon.textContent = '☰';
+        };
   });
+});
 
   // Initial Render
   renderCourses();

@@ -34,12 +34,18 @@
         justify-content: space-evenly;
         background-color: black;
         width: 100%;
-        margin-top: 0.5rem;    
+        margin-top: 0.5rem;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0); 
     }
     
+    nav.visible {
+        flex-direction: row;
+    }
+
     nav a {
         color: white;
-        
     }
 
     nav a.active {

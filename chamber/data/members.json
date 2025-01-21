@@ -1,0 +1,77 @@
+{
+    "members": [
+      {
+        "name": "Academy Press",
+        "address": "28/32 Industrial Avenue, Ilupeju Industrial Estate, Lagos",
+        "phonenumber": "(+234) 903 000 1367",
+        "level": 1,
+        "image": "https://academypress-plc.com/wp-content/uploads/2020/05/858x632.jpg",
+        "website": "https://academypress-plc.com"
+      },
+      {
+        "name": "China Southern Airlines",
+        "address": "Muritala Airport Rd, Ikeja 234001, Lagos",
+        "phonenumber": "(+1) 855 738 4238",
+        "level": 2,
+        "image": "https://airadvisor.com/Media/images/news/big/334d699ae1a52e2134f005124360ccfd.webp",
+        "website": "https://www.worldairlinesoffice.com/china-southern-airlines/china-southern-airlines-lagos-office-in-nigeria/"
+      },
+      {
+        "name": "Corner stone Insurance",
+        "address": "17 Adams street, Victoria Island, Lagos",
+        "phonenumber": "02 012 806500",
+        "level": 3,
+        "image": "https://cornerstone.com.ng/assets/uploads/product/5.jpg",
+        "website": "https://cornerstone.com.ng"
+      },
+      {
+        "name": "Dickem Farms",
+        "address": "No 19, Dickem Farm Close, Dickem Bus Stop, Along Waterworks Road, Isashi, Lagos",
+        "phonenumber": "(+234) 812 388 0357",
+        "level": 3,
+        "image": "https://dickemfarms.com/wp-content/uploads/brizy/imgs/about-dickem-aquatech-nigeria-623x415x118x0x387x415x1493220900.jpg",
+        "website": "https://dickemfarms.com"
+      },
+      {
+        "name": "GenieNG",
+        "address": "5, Idowu Taylor, Victoria Island, Lagos",
+        "phonenumber": "(+234) 805 550 2425",
+        "level": 1,
+        "image": "https://hekimatechnologies.co.za/wp-content/uploads/2023/08/Network-Solutions.jpg",
+        "website": "https://genie.com/"
+      },
+      {
+        "name": "Haco Industries",
+        "address": "10A Tinubu Road, Palmgrove Estate, Yaba, Lagos",
+        "phonenumber": "+234 1 493 3115",
+        "level": 2,
+        "image": "https://www.haco.co.ke/wp-content/uploads/2019/06/haco-tiger-brand-kenya-palmers-lotion-men-women-skincare-768x512.png",
+        "website": "https://haco.co.ke"
+      },
+      {
+        "name": "Hakman Engineering",
+        "address": "13, Toyin Street, Ikeja, Lagos,",
+        "phonenumber": "+234 708 788 6200",
+        "level": 1,
+        "image": "https://hakman-engineering.com/assets/img/about-us.png",
+        "website": "https://www.hakman-engineering.com/"
+      },
+      {
+        "name": "IEC Limited",
+        "address": " 8A, Amodu Tijani Close, Victoria Island, Lagos ",
+        "phonenumber": "+234 (0) 908 169 0510",
+        "level": 1,
+        "image": "https://iec.ng/assets/images/about/1.jpg",
+        "website": "https://iec.ng/"
+      },
+      {
+        "name": "Poultry Plaza",
+        "address": "Sw9/581 Central, Oke-Ayo, Ring Road",
+        "phonenumber": "(+234) 813 672 8506",
+        "level": 2,
+        "image": "https://poultryplaza.com/pub/media/wysiwyg/DAY_OLD_CHICKS_BANNER.jpg",
+        "website": "https://poultryplaza.com/"
+      }
+      
+    ]
+}

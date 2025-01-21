@@ -40,7 +40,7 @@
   }
 
   nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     position: absolute;
@@ -50,6 +50,17 @@
     /* background-color: #004a61; */
     padding: 10px;
     border-radius: 5px;
+    transform: translateY(-15%); /* Start off-screen */
+    opacity: 0; /* Fully hidden */
+    visibility: hidden; /* Make sure it's not interactable */
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+  nav.visible {
+    transform: translateX(0); /* Slide into view */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Enable interaction */
+    flex-direction: column;
   }
 
   nav a {
@@ -58,7 +69,7 @@
     font-size: 1rem;
     padding: 5px 10px;
     border-radius: 3px;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
   }
 
   nav a:hover, nav a.active {
