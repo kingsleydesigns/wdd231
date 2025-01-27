@@ -20,7 +20,7 @@ async function apiFetch1() {
       const response = await fetch(url1);
       if (response.ok) {
         const data1 = await response.json();
-        console.log(data1);
+        // console.log(data1);
     	  displayweather(data1); 
       } else {
           throw Error(await response.text());
@@ -35,7 +35,7 @@ async function apiFetch1() {
       const response = await fetch(url2);
       if (response.ok) {
         const data2 = await response.json();
-        console.log(data2);
+        // console.log(data2);
     	  displayForecast(data2); 
       } else {
           throw Error(await response.text());
