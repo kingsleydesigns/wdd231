@@ -196,7 +196,6 @@ div.events p{
 div.weather div{
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-self: left;
     padding-left: 10px;
 }
