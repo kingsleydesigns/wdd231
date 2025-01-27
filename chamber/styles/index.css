@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+header image {
+    display: block;
+}
+
+.header-text {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+button#hamburger {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background: none;
+    border: none;
+    display: block;
+    padding-bottom: .6rem;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+nav {
+    /* background-color: #ff6f61; */
+    background-color: #2c3e50;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: .75rem;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+nav ul li.active a {
+    background-color: rgba(184, 169, 240, 0.15); 
+    
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+nav.show {
+    grid-template-rows: 1fr;
+}
+
+/* Hero section */
+
+.hero {
+    display: flex; /* Enables Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center content */
+    justify-content: center; /* Vertically center content */
+    width: 100%;
+    height: 400px; /* Scales the height based on viewport */
+    overflow: hidden; /* Prevent unwanted scrollbars */
+    position: relative;
+    text-align: center; /* Center-align text inside the hero */
+}
+
+.hero .hero-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* Ensures the image covers the container proportionally */
+    position: absolute; /* Allows text and other elements to sit above it */
+    z-index: 1; /* Sends the image to the background */
+    /* opacity: 0.9; */
+}
+
+
+/* Hero Text */
+.hero .hero-text {
+    background: rgba(0, 0, 0, 0.6); /* Optional background for contrast */
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out 1s forwards;
+    z-index: 2;
+}
+
+/* Hero Text Styling */
+.hero .hero-text h1 {
+    font-size: 1.5rem;
+    color: #e8f5e9;
+    margin-bottom: 0.5rem;
+}
+
+.hero .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #e8f5e9;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #324b63;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: rgb(27, 63, 94);
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Settle in place */
+    }   
+}
+
+h2 {
+    color: #2c3e50;
+    margin: .75rem;
+}
+
+ /* Event amd weather styling */
+section.event-weather {
+    margin: .5rem 10px;
+}
+
+section.event-weather div {
+    background-color: #eee;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+section.event-weather h3 {
+    margin: 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+}
+
+.events {
+    display: flex; /* Create a flex container for the events */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align items to the start horizontally */
+}
+
+h3{
+    width: 100%;
+}
+
+div.events p{
+    margin: .75rem 10px;
+    display: flex;
+    align-items: center;
+}
+
+div.weather div{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-self: left;
+    padding-left: 10px;
+}
+
+
+div.weather p {
+    font-family: Verdana, sans-serif;
+    margin: .2rem 0;
+    /* font-size: .75rem; */
+    color: #008b94;
+}
+
+#forecast p {
+    display: flex;
+    font-family: Verdana, sans-serif;
+    color: #008b94;
+    font-size: .75rem;
+    align-items: center;
+}
+ 
+
+/* Spotlight styling */
+
+#spotlight div {
+    background-color: #eee;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 0px;
+}
+
+#spotlight h2 {
+    background-color: #2c3e50;
+    color: white;
+    margin: 0;
+    padding: .3rem 0;
+    font-size: 1.1rem;
+}
+
+#spotlight p {
+    margin: 0;
+    padding: .2rem;
+}
+
+#spotlight img {
+    height: 70px;
+    width: 30%;
+}
+
+
+
+
+
+footer {
+    background-color: #282c34;
+    /* background-color: #2c3e50; */
+    color: white;
+}
+
+footer p {
+    margin: 0.25rem;
+}
+
+.address, .project {
+    padding: 1rem 10px;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 1rem 0; /* Add space above the social icons */
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social li {
+    display: inline-block;
+}
+
+.footer-social a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #e8f5e9; /* Light green hover color */
+}
+
+
+
+
+
+/* Media query for larger screen size */
+
+@media screen and (min-width: 818px) {
+
+    button#hamburger {
+        display: none;
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+
+    nav ul li a {
+        border: none;
+        border-right: 1px solid rgba(0,0,0,0.2);
+    }
+
+    nav ul li:last-child a {
+        border:none;}
+    
+
+
+    section.event-weather {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .event-text {
+        display: flex; /* Flexbox for .event-text */
+        flex-direction: column; /* Stack paragraphs vertically */
+        justify-content: center; /* Vertically center the paragraphs */
+        gap: .75rem; /* Add space between paragraphs */
+        flex-grow: 1; /* Ensures it takes up the remaining height */
+    }
+
+    div.weather div{
+        align-items: center;
+        justify-self: center;
+        padding-left: 0px;
+    }
+
+    #forecast p {
+        justify-content: center;
+        margin: .5rem 10px;
+    }
+
+
+    #spotlight {
+        display: grid;
+        grid-template-columns: repeat(3,1fr); 
+    }
+
+
+
+
+    footer {
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .footer-social {
+        align-content: center;
+        justify-self: center;
+        padding-right: 5rem;
+    }
+
+
+}
