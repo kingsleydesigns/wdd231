@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lagos Chamber of commerce - Homepage</title>
-    <meta name="description" content="This page is the Homepage for a chamber of commerce and contains information about different businesses, weather forecast and weekly events.">
+    <title>Lagos Chamber of commerce - Join</title>
+    <meta name="description" content="This page is the JOin Page of the chamber of commerce and features a well designed form to process membership applications as well as a modal describing benefits for each membership level.">
     <meta name="author" content="Kingsley Ezepue">
     <meta property="og:title" content="Lagos Chamber of Commerce">
     <meta property="og:description" content="Lagos Chamber of Commerce Home page">
@@ -78,6 +78,7 @@
                     <!-- Membership Level -->
                     <label for="membership-level" title="Select your membership level">Membership Level:
                         <select id="membership-level" name="membership-level" title="Select your membership level" required>
+                            <option value="" disabled selected>Select a membership level</option>
                             <option value="np-membership">NP Membership (Non-Profit, No Fee)</option>
                             <option value="bronze">Bronze Membership</option>
                             <option value="silver">Silver Membership</option>
@@ -92,7 +93,7 @@
     
                     <!-- Hidden Timestamp -->
                     <input type="hidden" id="date" name="date" value="">
-                    <input type="hidden" id="time" name="time" value="">
+                    <!-- <input type="hidden" id="time" name="time" value=""> -->
     
                     <!-- Submit Button -->
                     <input type="submit" value="Apply for Membership">
@@ -118,13 +119,15 @@
                     <h3>Gold Membership Level</h3>
                     <button id="level4">Learn More</button>
                 </aside>
-                    <dialog id="modal"> 
-                        <div>
-                            <h4 id="title"></h4>
-                            <button id="close">❌</button>
-                        </div>
-                        <span id="details"></span>
-                    </dialog>
+
+                <dialog id="modal"> 
+                    <div>
+                        <h4 id="title"></h4>
+                        <button id="close">❌</button>
+                    </div>
+                    <span id="details"></span>
+                </dialog>
+            </section>
         </div>
     </main>
     <footer>

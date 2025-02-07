@@ -23,5 +23,4 @@ showInfo.innerHTML = `
 <p>Your Phone: ${show("phone")}</p>
 <p>Your Email: <a href="mailto:${show('email')}">${show("email")}</a></p>
 <p>Date: ${show("date")}</p>
-<p>Time: ${show("time")}</p>
 `

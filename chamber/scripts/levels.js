@@ -98,5 +98,5 @@ ml4Btn.addEventListener('click', () => {
 
 //ADD A HIDDEN DATE
 document.querySelector('#date').value = new Date().toDateString();
-document.querySelector('#time').value = new Date().toLocaleTimeString();
+// document.querySelector('#time').value = new Date().toLocaleTimeString();
 
