@@ -86,6 +86,29 @@ const courses = [
     }
 ]
 
+
+
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+      document.querySelectorAll('a').forEach(btn => btn.classList.remove('active'));
+      link.classList.add('active');
+
+      const menuIcon = document.getElementById('menu-icon')      
+      const menu = document.getElementById('menu');
+      
+
+          // Close the menu and reset the icon (only in mobile view)
+      if (window.innerWidth < 818) {
+        menu.classList.remove('visible');
+        setTimeout(() => {
+          menu.style.visibility = 'hidden';
+        }, 300); // Matches the transition duration in CSS
+        menuIcon.textContent = '☰';
+      };
+});
+});
+
+
   menuIcon = document.getElementById('menu-icon')
   menuIcon.addEventListener('click', () => {
     const menu = document.getElementById('menu');
@@ -108,6 +131,8 @@ const courses = [
 
   });
 
+
+
   function renderCourses(filter = 'all') {
     const courseContainer = document.getElementById('courses');
     const totalCreditsContainer = document.getElementById('totalCredits');
@@ -120,6 +145,9 @@ const courses = [
       const courseDiv = document.createElement('div');
       courseDiv.className = `course ${course.completed ? 'completed' : 'incomplete'}`;
       courseDiv.textContent = `${course.subject} ${course.number}`;
+      courseDiv.addEventListener ("click", () => {
+          displayCourseDetails(course);
+      });
       courseContainer.appendChild(courseDiv);
     });
 
@@ -137,25 +165,32 @@ const courses = [
     });
   });
 
-  document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelectorAll('a').forEach(btn => btn.classList.remove('active'));
-        link.classList.add('active');
 
-        const menuIcon = document.getElementById('menu-icon')      
-        const menu = document.getElementById('menu');
-        
 
-            // Close the menu and reset the icon (only in mobile view)
-        if (window.innerWidth < 818) {
-          menu.classList.remove('visible');
-          setTimeout(() => {
-            menu.style.visibility = 'hidden';
-          }, 300); // Matches the transition duration in CSS
-          menuIcon.textContent = '☰';
-        };
-  });
-});
+  function displayCourseDetails(course) {
+    const courseDetails = document.getElementById('course-details');
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies<strong>: ${course.technology.join(',')}</p>
+    `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+      courseDetails.close();
+    });
+
+    // Close modal when clicking outside of it
+    courseDetails.addEventListener("click", (event) => {
+      if (event.target === courseDetails) {
+          courseDetails.close();
+      }
+    });
+ }
 
   // Initial Render
   renderCourses();

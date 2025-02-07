@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of commerce - Directory page</title>
-    <meta name="description" content="This page is a directory page for a chamber of commerce and contains information about different businesses">
+    <title>Lagos Chamber of commerce - Homepage</title>
+    <meta name="description" content="This page is the Homepage for a chamber of commerce and contains information about different businesses, weather forecast and weekly events.">
     <meta name="author" content="Kingsley Ezepue">
     <meta property="og:title" content="Lagos Chamber of Commerce">
     <meta property="og:description" content="Lagos Chamber of Commerce Home page">
@@ -13,8 +13,7 @@
     <meta property="og:url" content="https://kingsleydesigns.github.io/wdd231/chamber">
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/join.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,19 +32,99 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="active"><a href="join.html">Join</a></li>
             <li><a href="#">Discover</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Directory</h1>
-        <div class="theButtons">
-            <button id="gridBtn" class="active">Grid</button>
-            <button id="ListBtn" class="">List</button>
-        </div>
-        <div id="members" class="grid">
-            <!-- JS puts stuff here -->
+        <h1>Join</h1>
+        <div class="sp">
+            <section>
+                <h2>Membership Application Form</h2>
+                <form method="get" action="thankyou.html" class="styling">
+                
+                    <!-- Applicant's First Name -->
+                    <label for="first-name" title="Enter your first name">First Name:
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name" required autocomplete="given-name">
+                    </label>
+    
+                    <!-- Applicant's Last Name -->
+                    <label for="last-name" title="Enter your last name">Last Name:
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name" required autocomplete="family-name">
+                    </label>
+    
+                    <!-- Email Address -->
+                    <label for="email" title="Enter your email address">Email:
+                        <input type="email" id="email" name="email" title="Enter your email address" required autocomplete="email" placeholder="example@email.com">
+                    </label>
+    
+                    <!-- Mobile Phone Number -->
+                    <label for="phone" title="Enter your mobile phone number">Mobile Phone:
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" required autocomplete="tel">
+                    </label>
+    
+                    <!-- Business/Organization Name -->
+                    <label for="organization" title="Enter your organization's name">Organization Name:
+                        <input type="text" id="organization" name="organization" title="Enter your organization's name" required autocomplete="organization">
+                    </label>
+    
+                    <!-- Organizational Title -->
+                    <label for="organization-title" title="Enter your organizational title">Organizational Title:
+                        <input type="text" id="organization-title" name="title" title="Enter your organizational title" autocomplete="organization-title" 
+                            pattern="[A-Za-z\s\-]{7,}" placeholder="Min 7 characters (letters, hyphens, spaces)">
+                    </label>
+
+                    <!-- Membership Level -->
+                    <label for="membership-level" title="Select your membership level">Membership Level:
+                        <select id="membership-level" name="membership-level" title="Select your membership level" required>
+                            <option value="np-membership">NP Membership (Non-Profit, No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+    
+                    <!-- Business/Organization Description -->
+                    <label for="description" title="Describe your business/organization">Organization Description:
+                        <textarea id="description" name="description" title="Describe your business/organization" rows="5" cols="40"></textarea>
+                    </label>
+    
+                    <!-- Hidden Timestamp -->
+                    <input type="hidden" id="date" name="date" value="">
+                    <input type="hidden" id="time" name="time" value="">
+    
+                    <!-- Submit Button -->
+                    <input type="submit" value="Apply for Membership">
+    
+                </form>
+            </section>
+            <section class="level">
+                <h2>Membership Levels</h2>
+                <!-- Non Provit level -->
+                <aside>
+                    <h3>Non Profit Membership Level</h3>
+                    <button id="level1">Learn More</button>
+                </aside>
+                <aside>
+                    <h3>Bronze Membership Level</h3>
+                    <button id="level2">Learn More</button>
+                </aside>
+                <aside>
+                    <h3>Silver Membership Level</h3>
+                    <button id="level3">Learn More</button>
+                </aside>
+                <aside>
+                    <h3>Gold Membership Level</h3>
+                    <button id="level4">Learn More</button>
+                </aside>
+                    <dialog id="modal"> 
+                        <div>
+                            <h4 id="title"></h4>
+                            <button id="close">❌</button>
+                        </div>
+                        <span id="details"></span>
+                    </dialog>
         </div>
     </main>
     <footer>
@@ -97,6 +176,6 @@
 
     <script src="scripts/nav.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/levels.js" defer></script>
 </body>
 </html>

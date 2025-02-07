@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of commerce - Directory page</title>
-    <meta name="description" content="This page is a directory page for a chamber of commerce and contains information about different businesses">
+    <title>Lagos Chamber of commerce - Homepage</title>
+    <meta name="description" content="This page is the Homepage for a chamber of commerce and contains information about different businesses, weather forecast and weekly events.">
     <meta name="author" content="Kingsley Ezepue">
     <meta property="og:title" content="Lagos Chamber of Commerce">
     <meta property="og:description" content="Lagos Chamber of Commerce Home page">
@@ -13,8 +13,8 @@
     <meta property="og:url" content="https://kingsleydesigns.github.io/wdd231/chamber">
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/thanks.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,20 +33,20 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="active"><a href="join.html">Join</a></li>
             <li><a href="#">Discover</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Directory</h1>
-        <div class="theButtons">
-            <button id="gridBtn" class="active">Grid</button>
-            <button id="ListBtn" class="">List</button>
-        </div>
-        <div id="members" class="grid">
-            <!-- JS puts stuff here -->
-        </div>
+        <h1>Thanks</h1>
+        <p class="p">We are very grateful for your interest in Joining our chamber and we'll contact you soon!
+             Attached below is a copy of your application details
+        </p>
+        <h2>Membership Application Details</h2>
+
+        <div id="results"></div>
+
     </main>
     <footer>
         <section class="address">
@@ -97,6 +97,6 @@
 
     <script src="scripts/nav.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/thanks.js" defer></script>
 </body>
 </html>
