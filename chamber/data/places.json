@@ -1,0 +1,54 @@
+{
+    "places" : [
+        {
+        "name": "Bar Beach",
+        "description": "A lively coastal gem offering stunning ocean views and a perfect spot to unwind and experience the vibrant energy of Lagos.",
+        "address": "Along Ahmadu Bello Way, Victoria Island, Lagos",
+        "photo_link": "bar-beach.webp"
+        },
+        {
+        "name": "Ozone Cinemas",
+        "description": "Your go-to spot for blockbuster hits and an immersive movie experience in ultimate comfort.",
+        "address": "Ozone e-centre, 1-11 Commercial Ave, Yaba, Lagos",
+        "photo_link": "cinema-image.webp"
+        },
+        {
+        "name": "Chai Tang restaurant",
+        "description": "Savor the rich flavors of authentic Chinese cuisine in a warm, inviting atmosphere.",
+        "address": "TwinWaters, Okunde Bluewater Zone Off, Remi Olowude St, Road, Lagos",
+        "photo_link": "chaitang-image.webp"
+        },
+        {
+        "name": "Tarkwa Bay",
+        "description": "A tranquil haven with shimmering waters, perfect for scenic strolls, boat rides, and sunset views.",
+        "address": "Plot 686A, Ozumba Mbadiwe Avenue, Victoria Island, Lagos",
+        "photo_link": "tarkwa-bay2.webp"
+        },
+        {
+        "name": "Omu Resort",
+        "description": "A serene escape where luxury meets nature, offering breathtaking views and endless relaxation.",
+        "address": "1 Omu Resort Drive, Bogije Town, Ibeju Lekki, Lagos",
+        "photo_link": "omu-resort.webp"
+        },
+        {
+        "name": "National Theatre",
+        "description": "Experience the heart of art and culture with captivating performances and stunning architecture at the National Theatre.",
+        "address": "Iganmu, Surulere, Lagos",
+        "photo_link": "National-Theatre.webp"
+        },
+        {
+        "name": "Third Mainland Bridge",
+        "description": "Cross the iconic Third Mainland Bridge, the longest in Africa, and soak in breathtaking views of Lagos' skyline and bustling waterways.",
+        "address": "156 Corporation Dr, Lagos",
+        "photo_link": "Third-Mainland-Bridge.webp"
+        },
+        {
+        "name": "Nike Art Gallery",
+        "description": "Explore the vibrant world of African creativity at Nike Art Gallery, home to an exquisite collection of traditional and contemporary art.",
+        "address": "2 Nike Art Gallery Rd, Lekki Phase I, Lagos",
+        "photo_link": "nike-gallery.webp"
+        }
+    ]
+}
+    
+    

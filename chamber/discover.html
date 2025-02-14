@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of commerce - Directory page</title>
-    <meta name="description" content="This page is a directory page for a chamber of commerce and contains information about different businesses">
+    <title>Lagos Chamber of commerce - Join</title>
+    <meta name="description" content="This page is the JOin Page of the chamber of commerce and features a well designed form to process membership applications as well as a modal describing benefits for each membership level.">
     <meta name="author" content="Kingsley Ezepue">
     <meta property="og:title" content="Lagos Chamber of Commerce">
     <meta property="og:description" content="Lagos Chamber of Commerce Home page">
@@ -13,8 +13,7 @@
     <meta property="og:url" content="https://kingsleydesigns.github.io/wdd231/chamber">
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/discover.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,20 +32,19 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="directory.html">Directory</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
+            <li class="active"><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
-    <main>
-        <h1>Directory</h1>
-        <div class="theButtons">
-            <button id="gridBtn" class="active">Grid</button>
-            <button id="ListBtn" class="">List</button>
-        </div>
-        <div id="members" class="grid">
-            <!-- JS puts stuff here -->
-        </div>
+    <main id="discover-main">
+        <h1>Discover</h1>
+        <section id="sidebar">
+          <p id="visitMessage">Welcome! Let us know if you have any questions.</p>
+        </section>
+        <section id="allplaces" class="grid-container">
+          <!-- Cards will be dynamically added here -->
+        </section>
     </main>
     <footer>
         <section class="address">
@@ -97,6 +95,6 @@
 
     <script src="scripts/nav.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 </body>
 </html>
