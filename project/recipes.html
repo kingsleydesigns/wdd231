@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover delicious recipes and plan your meals easily with our Recipe Finder & Meal Planner.">
+    <title>Recipe Finder & Meal Planner</title>
+    <link rel="stylesheet" href="styles/recipes.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+            <h1>Recipe Finder</h1>
+            <button id="menu-toggle" aria-label="Open Menu">&#9776;</button>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="recipes.html">Recipes</a></li>
+                    <li><a href="#meal-planner">Meal Planner</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="recipe-page">
+        <section class="search-filter">
+            <input type="text" id="search-bar" placeholder="Search for a recipe...">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <!-- Categories will be populated dynamically -->
+            </select>
+            <select id="ingredient-filter">
+                <option value="">All Ingredients</option>
+                <!-- Ingredients will be populated dynamically -->
+            </select>
+            <button id="search-btn">Search</button>
+        </section>
+    
+        <section id="recipe-results" class="recipe-grid">
+            <!-- Recipe cards will be dynamically generated here -->
+        </section>
+    
+        <!-- Recipe Modal using dialog element -->
+        <dialog id="recipe-modal">
+            <div class="modal-content">
+                <button class="close-btn" id="close-modal">❌</button>
+                <img id="modal-img" src="" alt="Recipe Image">
+                <h2 id="modal-title"></h2>
+                <h3>Ingredients</h3>
+                <ul id="modal-ingredients"></ul>
+                <h3>Instructions</h3>
+                <p id="modal-instructions"></p>
+                <a id="modal-video" href="#" target="_blank">Watch Video</a>
+            </div>
+        </dialog>
+    </main>    
+    <footer>
+        <p>&copy; 2025 Recipe Finder. All rights reserved.</p>
+    </footer>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/recipes.js" defer></script>
+</body>
+</html>

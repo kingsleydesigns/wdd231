@@ -1,0 +1,432 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Navigation */
+header {
+    background-color: #E27D60;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#menu-toggle {
+    background: none;
+    position: absolute;
+    right: 0;
+    padding-right: 5px;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #E8A87C;
+    display: grid;
+    position: absolute;
+    top: 71px;
+    right: 0px;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: .5rem;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+}
+
+nav ul li.active a {
+    /* text-decoration: 4px underline #41B3A3 solid;  */
+    color: black;
+    font-weight: bolder;
+    font-size: 28px;
+    padding: 0;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+nav.show {
+    grid-template-rows: 1fr;
+    
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    padding: 60px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 550px;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#hero h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#explore-btn {
+    background: #E27D60;
+    color: white;
+    border: 1px solid #E8A87C;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+
+#hero h2,
+#hero p,
+#explore-btn {
+  opacity: 0; /* Start hidden */
+  transform: translateX(-100%); /* Move off-screen (right) */
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Delay animations for staggered effect */
+#hero h2 {
+  animation-delay: 0.2s;
+}
+
+#hero p {
+  animation-delay: 0.4s;
+}
+
+#explore-btn {
+  animation-delay: 0.6s;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* Recipes Preview */
+#recipes-preview {
+    background-color: #41B3A3;
+    padding: 20px;
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(30px); /* Moves down slightly for better effect */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.featured-recipes {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 15px;
+    padding: 10px;
+  }
+  
+
+  .recipe-card {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    flex-grow: 1; /* Allows content to expand but pushes the button down */
+    justify-content: space-between; /* Space out elements */
+    height: 100%; /* Ensure all cards are the same height */
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #E8A87C;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.8); /* Start slightly smaller */
+  }
+  
+  /* Apply animation only when in-view */
+    .recipe-card.in-view {
+        animation: fadeInScaleUp 0.8s ease-out forwards;
+    }
+
+
+   #recipes-preview h3{
+     font-size: 24px;
+   }
+
+  .recipe-img {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px black;
+  }
+  
+  .recipe-title {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  
+  .recipe-summary {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .recipe-link {
+    background-color: #E27D60;
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .recipe-link:hover {
+    background-color: #41B3A3;
+    
+  }
+
+
+
+  /* Stagger animation delay for each of the 6 cards */
+.recipe-card:nth-child(1) { animation-delay: 0.2s; }
+.recipe-card:nth-child(2) { animation-delay: 0.4s; }
+.recipe-card:nth-child(3) { animation-delay: 0.6s; }
+.recipe-card:nth-child(4) { animation-delay: 0.8s; }
+.recipe-card:nth-child(5) { animation-delay: 1s; }
+.recipe-card:nth-child(6) { animation-delay: 1.2s; }
+
+/* Fade-in & Scale-Up Keyframes */
+@keyframes fadeInScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* When in view, apply the animation */
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+
+
+
+  /* Meal planning preview section */
+
+  .meal-plan-preview {
+    text-align: center;
+    padding: 20px;
+    background-color: #41B3A3;
+    margin-top: 0.5rem;
+}
+
+.table-animate {
+    opacity: 0;
+    transform: translateY(30px); /* Moves down slightly for better effect */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.table-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Initial state: Hidden and slightly left */
+.fade-in-slide {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When in-view: Fully visible and in place */
+.fade-in-slide.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.meal-plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #E8A87C;
+    margin: 20px 0;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.meal-plan-table th, .meal-plan-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.meal-plan-table th {
+    background-color: #E27D60;
+    color: black;
+    text-transform: uppercase;
+}
+
+.meal-plan-table tr {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.meal-plan-table tr.fade-in-scale {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-btn {
+    background-color: #E27D60;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #E8A87C;
+}
+
+
+
+/* Footer */
+footer {
+    background: #E27D60;
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    nav {
+        background-color: #E27D60;
+        grid-template-rows: 1fr;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+
+
+
+    .featured-recipes {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+      }
+
+    
+
+    .meal-plan-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    
+    #hero h2 {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #hero {
+        padding: 100px 50px;
+    }
+
+    .featured-recipes {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+      }
+
+    .meal-plan-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
