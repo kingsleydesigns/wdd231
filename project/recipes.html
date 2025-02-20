@@ -2,26 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover delicious recipes and plan your meals easily with our Recipe Finder & Meal Planner.">
-    <title>Recipe Finder & Meal Planner</title>
+    <title>Recipe Finder & Meal Planner - Recipes</title>
+    <meta name="description" content="This is the Recipes Page displaying various recipes and giving users the option to search or filter specific recipes">
+    <meta name="author" content="Kingsley Ezepue">
+    <meta property="og:title" content="Recipe Finder and Meal Planner">
+    <meta property="og:description" content="Recipe Finder and Meal Planner Homepage">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://kingsleydesigns/github.io/wdd231/project/images/hero-image1.jpg">
+    <meta property="og:url" content="https://kingsleydesigns.github.io/wdd231/project">
     <link rel="stylesheet" href="styles/recipes.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-            <h1>Recipe Finder</h1>
+            <h1>Recipe & Meals</h1>
             <button id="menu-toggle" aria-label="Open Menu">&#9776;</button>
             <nav>
                 <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li class="active"><a href="recipes.html">Recipes</a></li>
-                    <li><a href="#meal-planner">Meal Planner</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="mealplanner.html">Meal Planner</a></li>
                 </ul>
             </nav>
     </header>
     <main class="recipe-page">
+        <h2 class="main-header">Recipes</h2>
         <section class="search-filter">
             <input type="text" id="search-bar" placeholder="Search for a recipe...">
             <select id="category-filter">
@@ -43,7 +52,7 @@
         <dialog id="recipe-modal">
             <div class="modal-content">
                 <button class="close-btn" id="close-modal">❌</button>
-                <img id="modal-img" src="" alt="Recipe Image">
+                <img id="modal-img" src="images/hero-image.jpg" alt="Recipe Image">
                 <h2 id="modal-title"></h2>
                 <h3>Ingredients</h3>
                 <ul id="modal-ingredients"></ul>
@@ -54,6 +63,43 @@
         </dialog>
     </main>    
     <footer>
+        <section class="footer-social">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li class="active"><a href="mealplanner.html">Meal Planner</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 320 512">
+                            <path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S255.77 0 225.36 0c-73.42 0-121.36 44.38-121.36 124.72v70.62H64v92.66h39.98v224h96.17v-224z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.421-84.143-51.98-84.143-103.197v-1.299c14.182 7.89 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.182-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.78-2.599-15.89-2.599-24.009 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.505 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.78 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M100.28 448H7.4V165.48h92.88zm-46.44-317A53.61 53.61 0 1 1 107.45 53.6 53.61 53.61 0 0 1 53.84 131zm447.66 317h-92.7V302.4c0-34.7-12.39-58.3-43.29-58.3-23.6 0-37.6 15.89-43.79 31.2-2.24 5.4-2.8 12.9-2.8 20.5V448h-92.7s1.2-251.3 0-277.5h92.7v39.3c-.2.3-.5.7-.7 1h.7v-1c12.3-19 34.4-46.2 83.5-46.2 60.9 0 106.6 39.8 106.6 125.4V448z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M224.1 141c-63.6 0-115.1 51.5-115.1 115.1S160.5 371.2 224.1 371.2 339.2 319.7 339.2 256.1 287.7 141 224.1 141zm0 186.4c-39.3 0-71.4-32.1-71.4-71.4s32.1-71.4 71.4-71.4 71.4 32.1 71.4 71.4-32.1 71.4-71.4 71.4zm146.4-194.3c0 14.9-12.1 27-27 27-14.9 0-27-12.1-27-27s12.1-27 27-27 27 12.1 27 27zm76.1 27.2c-.6-34.8-9.8-65.8-36.1-91.2-26.4-26.4-56.4-35.5-91.2-36.1-35.9-2-143.2-2-179.1 0-34.8.6-65.8 9.8-91.2 36.1-26.4 26.4-35.5 56.4-36.1 91.2-2 35.9-2 143.2 0 179.1.6 34.8 9.8 65.8 36.1 91.2 26.4 26.4 56.4 35.5 91.2 36.1 35.9 2 143.2 2 179.1 0 34.8-.6 65.8-9.8 91.2-36.1 26.4-26.4 35.5-56.4 36.1-91.2 2-35.9 2-143.2 0-179.1z"/>
+                        </svg>                                                                            
+                    </a>
+                </li>
+            </ul>
+        </section>
         <p>&copy; 2025 Recipe Finder. All rights reserved.</p>
     </footer>
     <script src="scripts/nav.js" defer></script>

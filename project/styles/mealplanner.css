@@ -1,0 +1,344 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Navigation */
+header {
+    background-color: #E27D60;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#menu-toggle {
+    background: none;
+    position: absolute;
+    right: 0;
+    padding-right: 5px;
+    border: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #E8A87C;
+    display: grid;
+    position: absolute;
+    top: 71px;
+    right: 0px;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: .5rem;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+}
+
+nav ul li.active a {
+    /* text-decoration: 4px underline #41B3A3 solid;  */
+    color: black;
+    font-weight: bolder;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+nav.show {
+    grid-template-rows: 1fr;
+    
+}
+
+
+
+/* Main Container */
+h2 {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+main {
+    padding: 20px;
+    background-color: #41B3A3;
+}
+
+/* Meal Planner Form */
+#meal-planner-form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#meal-planner-form h3 {
+    text-align: center;
+}
+
+#meal-planner-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#meal-planner-form label {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#meal-planner-form input,
+#meal-planner-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#cuisine {
+    margin-bottom: 20px;
+}
+
+#meal-planner-form fieldset {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds space between checkboxes */
+    align-items: center;
+}
+
+#meal-planner-form fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between checkbox and label text */
+    margin-top: 0;
+    color: #333;
+}
+
+#meal-planner-form legend {
+    display: block;
+    font-weight: bold;
+    margin-top: -10px;
+    text-align: left;
+}
+
+#meal-planner-form button {
+    background-color: #E27D60;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#meal-planner-form button:hover {
+    background-color: #41B3A3;
+}
+
+/* Weekly Meal Plan Table */
+#weekly-meal-plan {
+    background: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    opacity: 0; /* Start hidden */
+    transform: translateX(100%); /* Move off-screen (right) */
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+#weekly-meal-plan h3 {
+    text-align: center;
+}
+
+#weekly-meal-plan table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#weekly-meal-plan th, 
+#weekly-meal-plan td {
+    border: 1px solid #E8A87C;
+    padding: 8px;
+    text-align: left;
+}
+
+#weekly-meal-plan th {
+    background-color: #E27D60;
+}
+
+/* Buttons for Saving & Printing */
+#save-plan,
+#print-plan {
+    background-color: #E27D60;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#save-plan:hover,
+#print-plan:hover {
+    background-color: #41B3A3;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background: #E27D60;
+    padding: 10px;
+}
+
+.footer-social ul {
+    list-style: none;
+    align-content: center;
+    justify-self: center;
+    padding-left: 1rem;
+    margin: .5rem 0; /* Add space above the social icons */
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social li {
+    display: inline-block;
+}
+
+.footer-social a {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #e8f5e9; /* Light green hover color */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    nav {
+        background-color: #E27D60;
+        grid-template-rows: 1fr;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    #weekly-meal-plan {
+        flex: 2;
+        margin-top: 0;
+    }
+
+    #meal-planner-form {
+        flex: 1;
+    }
+
+    #meal-planner-form button {
+        width: auto;
+    }
+
+    #save-plan, #print-plan {
+        width: auto;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+
+
+
+    .footer-social {
+        padding-right: 2rem;
+    }
+}
+
+
+
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    main {
+        gap: 20px;
+    }
+
+    #meal-planner-form {
+        padding: 20px;
+        margin: 0;
+    }
+
+    #weekly-meal-plan {
+        padding: 20px;
+        margin: 0;
+    }
+}

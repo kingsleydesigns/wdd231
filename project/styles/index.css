@@ -17,7 +17,6 @@ body {
 header {
     background-color: #E27D60;
     padding: 10px;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,12 +55,12 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     padding: .5rem;
     display: block;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-wrap: nowrap;
 }
 
@@ -69,8 +68,6 @@ nav ul li.active a {
     /* text-decoration: 4px underline #41B3A3 solid;  */
     color: black;
     font-weight: bolder;
-    font-size: 28px;
-    padding: 0;
 }
 
 nav ul li a:hover {
@@ -122,7 +119,8 @@ nav.show {
 
 #explore-btn {
     background: #E27D60;
-    color: white;
+    color: black;
+    text-decoration: none;
     border: 1px solid #E8A87C;
     padding: 10px 20px;
     cursor: pointer;
@@ -132,12 +130,15 @@ nav.show {
     z-index: 1;
 }
 
+#explore-btn:hover {
+    background-color: #E8A87C;
+}
 
 #hero h2,
 #hero p,
 #explore-btn {
   opacity: 0; /* Start hidden */
-  transform: translateX(-100%); /* Move off-screen (right) */
+  transform: translateX(-100%); /* Move off-screen (left) */
   animation: slideIn 1s ease-out forwards;
 }
 
@@ -238,7 +239,7 @@ nav.show {
     display: block;
     width: 40%;
     margin: 10px auto;
-    color: white;
+    color: #333;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -350,7 +351,7 @@ nav.show {
 
 .cta-btn {
     background-color: #E27D60;
-    color: white;
+    color: black;
     padding: 12px 18px;
     border: none;
     cursor: pointer;
@@ -368,9 +369,37 @@ nav.show {
 /* Footer */
 footer {
     background: #E27D60;
-    color: white;
     padding: 10px;
 }
+
+.footer-social ul {
+    list-style: none;
+    align-content: center;
+    justify-self: center;
+    padding-left: 1rem;
+    margin: .5rem 0; /* Add space above the social icons */
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social li {
+    display: inline-block;
+}
+
+.footer-social a {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #e8f5e9; /* Light green hover color */
+}
+
+
+
+
 
 /* Responsive Styles */
 @media (min-width: 768px) {
@@ -395,6 +424,9 @@ footer {
         display: none;
     }
 
+    #hero h2 {
+        font-size: 50px;
+    }
 
 
 
@@ -408,9 +440,8 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    
-    #hero h2 {
-        font-size: 50px;
+    .footer-social {
+        padding-right: 2rem;
     }
 }
 

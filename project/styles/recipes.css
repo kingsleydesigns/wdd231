@@ -17,7 +17,6 @@ body {
 header {
     background-color: #E27D60;
     padding: 10px;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +32,7 @@ header {
     padding-right: 5px;
     border: none;
     font-size: 24px;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -56,12 +55,12 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     padding: .5rem;
     display: block;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-wrap: nowrap;
 }
 
@@ -69,8 +68,6 @@ nav ul li.active a {
     /* text-decoration: 4px underline #41B3A3 solid;  */
     color: black;
     font-weight: bolder;
-    font-size: 25px;
-    padding: 0;
 }
 
 nav ul li a:hover {
@@ -83,6 +80,11 @@ nav.show {
 }
 
   /* Main recipe page styling */
+.main-header {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
 .recipe-page {
     padding: 20px;
     background-color: #41B3A3;
@@ -199,8 +201,32 @@ dialog img {
 /* Footer */
 footer {
     background: #E27D60;
-    color: white;
     padding: 10px;
+}
+
+.footer-social ul {
+    list-style: none;
+    align-content: center;
+    justify-self: center;
+    padding-left: 1rem;
+    margin: .5rem 0; /* Add space above the social icons */
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social li {
+    display: inline-block;
+}
+
+.footer-social a {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #e8f5e9; /* Light green hover color */
 }
 
 
@@ -240,6 +266,12 @@ footer {
     .recipe-grid {
         /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
         grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+
+
+
+    .footer-social {
+        padding-right: 2rem;
     }
 }
 

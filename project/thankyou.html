@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder & Meal Planner- HomePage</title>
-    <meta name="description" content="Discover delicious recipes and plan your meals easily with our Recipe Finder & Meal Planner.">
+    <title>Recipe Finder & Meal Planner - Thank You</title>
+    <meta name="description" content="This is the Thank you page expressing gratitude to the user and displaying the previously submitted details">
     <meta name="author" content="Kingsley Ezepue">
     <meta property="og:title" content="Recipe Finder and Meal Planner">
     <meta property="og:description" content="Recipe Finder and Meal Planner Homepage">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://kingsleydesigns/github.io/wdd231/project/images/hero-image1.jpg">
     <meta property="og:url" content="https://kingsleydesigns.github.io/wdd231/project">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,49 +23,25 @@
             <button id="menu-toggle" aria-label="Open Menu">&#9776;</button>
             <nav>
                 <ul id="nav-links">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="mealplanner.html">Meal Planner</a></li>
+                    <li class="active"><a href="mealplanner.html">Meal Planner</a></li>
                 </ul>
             </nav>
     </header>
     <main>
-        <section id="hero">
-            <img src="images/hero-image1.jpg" alt="Delicious meal" class="hero-image">
-            <h2>Find Your Perfect Recipe</h2>
-            <p>Discover delicious meals tailored to your taste and dietary needs.</p>
-            <a href="recipes.html" id="explore-btn">Explore Recipes</a>
-        </section>
-        <section id="recipes-preview" class="animate">
-            <h3>Featured Recipes</h3>
-            <div id="featured-recipes" class="featured-recipes">
-                <!-- Recipes will be dynamically inserted here -->
-            </div>
-        </section>
-        <section class="table-animate animate meal-plan-preview">
-            <h2>Weekly Meal Plan Preview</h2>
-            <p>Here's a sneak peek at a structured meal plan. Click below for full customization.</p>
-        
-            <table class="meal-plan-table">
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Meal</th>
-                        <th>Category</th>
-                    </tr>
-                </thead>
-                <tbody id="meal-plan-body">
-                    <!-- Meals will be inserted dynamically here -->
-                </tbody>
-            </table>
-        
-            <a class="cta-btn" href="recipes.html">View Full Meal Plan</a>
-        </section>
-        
+        <h2>Thanks</h2>
+        <p class="p">We are very grateful to you for trusting us with your Weekly Meal Plan!
+            <br>Your weekly meal plan has been generated on the previous tab.
+            <br>Attached below is a copy of your submission details
+        </p>
+
+        <div id="results"></div>
+        <a href="mealplanner.html" class="back-button">Back to MealPlanner</a>
     </main>
     <footer>
         <section class="footer-social">
-            <ul>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
                 <li class="active"><a href="mealplanner.html">Meal Planner</a></li>
@@ -105,7 +80,6 @@
         <p>&copy; 2025 Recipe Finder. All rights reserved.</p>
     </footer>
     <script src="scripts/nav.js" defer></script>
-    <script src="scripts/featured-recipes.js" defer></script>
-    <script src="scripts/mealplanner-preview.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
 </body>
 </html>

@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder & Meal Planner- HomePage</title>
-    <meta name="description" content="Discover delicious recipes and plan your meals easily with our Recipe Finder & Meal Planner.">
+    <title>Recipe Finder & Meal Planner - Meal Planner</title>
+    <meta name="description" content="This is the Meal Planner Page which uses a form to get user details and generates a weekly meal plan based on their preferences.">
     <meta name="author" content="Kingsley Ezepue">
     <meta property="og:title" content="Recipe Finder and Meal Planner">
     <meta property="og:description" content="Recipe Finder and Meal Planner Homepage">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://kingsleydesigns/github.io/wdd231/project/images/hero-image1.jpg">
     <meta property="og:url" content="https://kingsleydesigns.github.io/wdd231/project">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/mealplanner.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,45 +23,73 @@
             <button id="menu-toggle" aria-label="Open Menu">&#9776;</button>
             <nav>
                 <ul id="nav-links">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="mealplanner.html">Meal Planner</a></li>
+                    <li class="active"><a href="mealplanner.html">Meal Planner</a></li>
                 </ul>
             </nav>
     </header>
     <main>
-        <section id="hero">
-            <img src="images/hero-image1.jpg" alt="Delicious meal" class="hero-image">
-            <h2>Find Your Perfect Recipe</h2>
-            <p>Discover delicious meals tailored to your taste and dietary needs.</p>
-            <a href="recipes.html" id="explore-btn">Explore Recipes</a>
+        <h2>Meal Planner</h2>
+        <!-- Meal Planner Form -->
+        <section id="meal-planner-form">
+            <h3>Customize Your Meal Plan</h3>
+            <form action="thankyou.html" method="GET">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@xyz.com" autocomplete="email" required>
+                
+                <label for="diet">Dietary Preference:</label>
+                <select id="diet" name="diet">
+                    <option value="none">No Preference</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="keto">Keto</option>
+                </select>
+                
+                <label for="cuisine">Preferred Cuisine:</label>
+                <select id="cuisine" name="cuisine">
+                    <option value="none">No Preference</option>
+                    <option value="italian">Italian</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="asian">Asian</option>
+                </select>
+                
+                <fieldset>
+                    <legend>Meal Types:</legend>
+                    <label><input type="checkbox" name="mealType" value="breakfast"> Breakfast</label>
+                    <label><input type="checkbox" name="mealType" value="lunch"> Lunch</label>
+                    <label><input type="checkbox" name="mealType" value="dinner"> Dinner</label>
+                </fieldset>
+                
+                <!-- Hidden Timestamp -->
+                <input type="hidden" id="date" name="date" value="">
+
+                <button type="submit">Generate Meal Plan</button>
+            </form>
         </section>
-        <section id="recipes-preview" class="animate">
-            <h3>Featured Recipes</h3>
-            <div id="featured-recipes" class="featured-recipes">
-                <!-- Recipes will be dynamically inserted here -->
-            </div>
-        </section>
-        <section class="table-animate animate meal-plan-preview">
-            <h2>Weekly Meal Plan Preview</h2>
-            <p>Here's a sneak peek at a structured meal plan. Click below for full customization.</p>
         
-            <table class="meal-plan-table">
+        <!-- Weekly Meal Plan Table -->
+        <section id="weekly-meal-plan">
+            <h3>Your Weekly Meal Plan</h3>
+            <table>
                 <thead>
                     <tr>
                         <th>Day</th>
-                        <th>Meal</th>
-                        <th>Category</th>
+                        <th>Breakfast</th>
+                        <th>Lunch</th>
+                        <th>Dinner</th>
                     </tr>
                 </thead>
-                <tbody id="meal-plan-body">
-                    <!-- Meals will be inserted dynamically here -->
+                <tbody>
+                    <!-- Rows will be dynamically inserted here -->
                 </tbody>
             </table>
-        
-            <a class="cta-btn" href="recipes.html">View Full Meal Plan</a>
+            <button id="save-plan">Save Plan</button>
+            <button id="print-plan">Print Plan</button>
         </section>
-        
     </main>
     <footer>
         <section class="footer-social">
@@ -105,7 +132,6 @@
         <p>&copy; 2025 Recipe Finder. All rights reserved.</p>
     </footer>
     <script src="scripts/nav.js" defer></script>
-    <script src="scripts/featured-recipes.js" defer></script>
-    <script src="scripts/mealplanner-preview.js" defer></script>
+    <script src="scripts/mealplanner.js" defer></script>
 </body>
 </html>
